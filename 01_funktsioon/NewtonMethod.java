@@ -3,11 +3,11 @@ import java.util.Random;
 
 public class NewtonMethod{
     public static double sqrt(int number){
-        double EPSILON = 10E-09;
+        double EPSILON = 10E-09; // täpsus
 
         Random rn = new Random();
 
-        int oldSqrt = rn.nextInt(11);
+        int oldSqrt = rn.nextInt(11); // tekib viga kui random valib arvuks 0
         int newSqrt = (number/oldSqrt + oldSqrt) / 2;
 
         while(Math.abs(oldSqrt - newSqrt) > EPSILON){
@@ -15,7 +15,7 @@ public class NewtonMethod{
             newSqrt = (number/oldSqrt + oldSqrt) / 2;
         }
 
-        return newSqrt;
+        return newSqrt; // tagastab ruutjuure
     }
 
     public static void main(String[] args){
@@ -25,5 +25,12 @@ public class NewtonMethod{
         int number = reader.nextInt();
 
         System.out.println(sqrt(number));
+
+
+        /*
+        [kertlil@greeny 01_funktsioon]$ java NewtonMethod
+        Sisesta arv: 16
+        4.0
+        */
     }
 }
