@@ -7,8 +7,8 @@ public class NewtonMethod{
 
         Random rn = new Random();
 
-        int oldSqrt = rn.nextInt(11) + 1;  // +1 juhuks kui genereerib 0
-        int newSqrt = (number/oldSqrt + oldSqrt) / 2;
+        double oldSqrt = rn.nextInt(11) + 1;  // +1 juhuks kui genereerib 0
+        double newSqrt = (number/oldSqrt + oldSqrt) / 2;
 
         while(Math.abs(oldSqrt - newSqrt) > EPSILON){
             oldSqrt = newSqrt;
