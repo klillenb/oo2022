@@ -1,0 +1,22 @@
+public class Punktid2{
+    public static void main(String[] args){
+        double[][] arr = {
+                {1.0, 2.5},
+                {3.0, 4.0},
+                {1.5, 3.5},
+        };
+        Punkt2D pd[] = new Punkt2D[arr.length];
+        double suurim = 0.0;
+        for(int i = 0; i < arr.length; i++){
+            pd[i] = new Punkt2D(arr[i][0], arr[i][1]);
+            System.out.println(pd[i].kirjutaAndmed());
+            //System.out.println("Kaugus nullist: " + pd[i].kaugusNullist2D());
+            if(pd[i].kaugusNullist2D() > suurim){
+                suurim = pd[i].kaugusNullist2D();
+            }
+        }
+        System.out.println("Suurim kaugus nullist on: " + suurim);
+
+
+    }
+}
