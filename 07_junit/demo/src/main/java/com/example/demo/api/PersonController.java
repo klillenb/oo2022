@@ -35,6 +35,12 @@ public class PersonController {
                 .orElse(null);
     }
 
+    @GetMapping(path = "/{name}")
+    public Person getPersonByName(@PathVariable("name") String name){
+        return personService.getPersonByName(name)
+                .orElse(null);
+    }
+
     @DeleteMapping(path = "/{id}")
     public void deletePersonById(@PathVariable("id") UUID id){
         personService.deletePerson(id);
