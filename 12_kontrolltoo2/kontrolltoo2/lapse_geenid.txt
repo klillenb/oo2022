@@ -1,0 +1,12 @@
+Geen{
+alleel1=Alleel{
+nimetus='reesus', dominantsus=false}
+alleel2=Alleel{
+nimetus='veregrupp A', dominantsus=false}
+}
+Geen{
+alleel1=Alleel{
+nimetus='reesus', dominantsus=true}
+alleel2=Alleel{
+nimetus='veregrupp A', dominantsus=false}
+}
